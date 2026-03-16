@@ -845,6 +845,7 @@ cursor: pointer;
 
     .button{
         width:90%;
+        margin:auto;
     }
     .hero-background{
         height:100%;
@@ -856,7 +857,7 @@ cursor: pointer;
         }
 
         .hero-buttons{
-            width:50%;
+            width:90%;
             margin:auto;
         }
 
