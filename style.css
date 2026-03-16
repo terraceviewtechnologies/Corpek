@@ -8,6 +8,15 @@ font-optical-sizing: auto;
 color:#ffffff;
 }
 
+/* ibm-plex-serif-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'IBM Plex Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/ibm-plex-serif-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 h1, h2, h3, h4 {
 padding: 8px;
 }
@@ -77,7 +86,7 @@ top: 0;
 .nav.responsive a {
 float: none;
 display: block;
-text-align: left;
+text-align: center;
 }
 }
 
