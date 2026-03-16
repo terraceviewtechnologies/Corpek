@@ -844,7 +844,7 @@ cursor: pointer;
 @media only screen and (max-width: 780px) {
 
     .button{
-        margin:auto;
+        width:90%;
     }
     .hero-background{
         height:100%;
