@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corpek Manufacturing - Modern Fabrication for Real-World Production</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+<body>
+
+    <!-- Netlify Form Detector (Hidden) -->
+    <form enctype='multipart/form-data' hidden method='POST' name='quote-request'>
+        <input type="hidden" name="form-name" value="quote-request" />
+        <input name="bot-field" />
+
+        <input name="name" />
+        <input name="email" />
+        <input name="company" />
+        <input name="phone" />
+        <input name="quantity" />
+        <input name="due_date" />
+        <textarea name="notes"></textarea>
+
+        <!-- ✅ lock file types here too -->
+        <input type="file" name="file" accept=".dxf,.dwg,.step,.stp,.pdf,.zip" />
+    </form>
+
+    <!-- Navbar -->
+    <section class="nav" id="navbar">
+        <a href="index.html"><img src="images/CorpekLogo.jpg" alt="Corpek Manufacturing" class="logo"></img></a>
+        <a href="index.html" class="home">Corpek Manufacturing</a>
+        <a class="serv-link" href="services.html">Services</a>
+        <a href="materials.html">Materials</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="about.html">About</a>
+        <a href="supplier.html">Become a Supplier</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-phone"
+            viewBox="0 0 16 16">
+            <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+        </svg>
+        <a href="tel:+1234567890">234567890</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="quote.html">Get A Quote</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </section>
+
+
+    <!--Cards -->
+    <section class="terms-body-card">
+        <h2>Terms of Service</h2>
+        <p>These Terms apply to all quotes, orders, and services provided by Corpek Manufacturing, LLC (“Corpek”, “we”,
+            “us”). By requesting a quote or placing an order, you (“Customer”, “you”) agree to the Terms below.</p>
+        <section class="terms-card">
+            <h3>Quick overview</h3>
+            <ul>
+                <li>Quotes and lead times depend on scope, material, routing, and finishing — final terms are confirmed
+                    on your quote.</li>
+                <li>You confirm you have the right to share the files you submit for quoting/production.</li>
+                <li>Production may follow standard manufacturing practices unless special requirements are explicitly
+                    stated in writing.</li>
+                <li>We’ll always confirm any key assumptions or questions before release when practical.</li>
+            </ul>
+        </section>
+        <section class="terms-card">
+            <h3>1) Quotes & assumptions</h3>
+            <p>Quotes are based on the information provided (files, notes, quantity, material, finishing, and any
+                callouts). If information is incomplete, we may quote using standard assumptions (for example: standard
+                tolerances, deburr, or finish). Any assumptions or clarifications will be stated on the quote.</p>
+
+            <p>Quotes are typically valid for a limited time due to material and capacity changes. If pricing changes,
+                we’ll re-quote before you’re charged.</p>
+        </section>
+        <section class="terms-card">
+            <h3>2) Lead times, delivery, and expedite</h3>
+            <p>Lead time varies based on material availability, quantity, routing, and finishing. Many jobs ship within
+                4–6 days, but this is not a guarantee. Confirmed timing and ship method will be listed on your quote or
+                order confirmation.</p>
+            <p>Expedited options may be available and will be quoted separately. Delays caused by carriers, weather,
+                third-party suppliers, or force majeure events are outside our control.</p>
+        </section>
+        <section class="terms-card">
+            <h3>3) Customer responsibilities</h3>
+            <ul>
+                <li>Provide accurate files, revision level, quantity, material, and requirements.</li>
+                <li>Clearly identify critical features, tolerances, finish requirements, and inspection expectations.
+                </li>
+                <li>Confirm you own or have permission to use the submitted design files and content.</li>
+                <li>Review and approve the quote (including assumptions) before production begins.</li>
+            </ul>
+        </section>
+        <section class="terms-card">
+            <h3>4) Revisions & change requests</h3>
+            <p>Changes to files, scope, material, quantity, or finishing after a quote is approved may require a
+                re-quote and can affect lead time. Once production starts, changes may not be possible.</p>
+        </section>
+        <section class="terms-card">
+            <h3>5) Quality, inspection, and acceptance</h3>
+            <p>Parts are produced to the requirements stated on your quote and/or approved drawing notes. Unless
+                otherwise specified, standard commercial practices apply for tolerances, cosmetic variation, and minor
+                handling marks.</p>
+            <p>You agree to inspect parts promptly upon receipt. If there is an issue, notify us in writing as soon as
+                possible with photos and a clear description. We’ll work with you on a reasonable path (replacement,
+                rework, or credit) when appropriate.</p>
+        </section>
+        <section class="terms-card">
+            <h3>6) Payment & taxes</h3>
+            <p>Payment terms are provided on your quote/invoice. Orders may require payment before release. You are
+                responsible for applicable taxes, duties, and fees unless otherwise stated.</p>
+        </section>
+        <section class="terms-card">
+            <h3>7) Intellectual property & confidentiality</h3>
+            <p>You retain ownership of your submitted designs. We use your files only to evaluate, quote, and fulfill
+                your request. We do not sell your information. If you need a formal NDA, ask before submitting sensitive
+                files.</p>
+        </section>
+        <section class="terms-card">
+            <h3>8) Limitation of liability</h3>
+            <p>To the maximum extent permitted by law, Corpek is not liable for indirect, incidental, special, or
+                consequential damages (including downtime, lost profits, or lost production). Corpek’s total liability
+                is limited to the amount paid for the specific affected order.</p>
+        </section>
+        <section class="terms-card">
+            <h3>9) Warranty disclaimer</h3>
+            <p>Except as explicitly stated on a quote or in writing, services and parts are provided “as is” and “as
+                available.” Customer is responsible for ensuring the design is fit for the intended purpose.</p>
+        </section>
+        <section class="terms-card">
+            <h3>10) Order cancellation</h3>
+            <p>If you cancel before production begins, we’ll do our best to minimize costs. If production has started or
+                materials have been purchased, cancellation may result in charges for work completed and non-returnable
+                materials.</p>
+        </section>
+        <section class="terms-card">
+            <h3>11) Governing law</h3>
+            <p>These Terms are governed by the laws of the State of Illinois, without regard to conflict of law
+                principles.</p>
+        </section>
+        <section class="terms-card">
+            <h3>12) Updates to these Terms</h3>
+            <p>We may update these Terms from time to time. The version posted on this page applies unless a written
+                agreement states otherwise.</p>
+            <p>Questions? Email: <strong>quotes@corpekmanufacturing.com. </strong></p>
+        </section>
+
+    </section>
+    <!-- Footer -->
+    <section class="footer" style="display: flex; justify-content: space-around; padding: 3rem; background: #000000;">
+        <section class="footer-col1">
+            <div style="display: flex;">
+                <img src="images/CorpekLogo.jpg" alt="Corpek Manufacturing" class="logo-bottom"></img>
+                <h2>Corpek Manufacturing</h2>
+            </div>
+            <p>Engineer-reviewed quoting and controlled <br>
+                production workflows for laser-cut and fabricated parts.</p>
+            <p>Email: <a href="mailto:quotes@corpekmanufacturing.com"
+                    style="color: #a6b7d8;">quotes@corpekmanufacturing.com</a><br>
+                Peoria, Illinois</p>
+        </section>
+        <section class="footer-col2">
+            <h3>Explore</h3>
+            <div class="footer-link">
+                <a href="services.html">Services</a>
+            </div>
+            <div class="footer-link">
+                <a href="materials.html">Materials</a>
+            </div>
+            <div class="footer-link">
+                <a href="capabilities.html">Capabilities</a>
+            </div>
+            <div class="footer-link">
+                <a href="about.html">About</a>
+            </div>
+        </section>
+        <section class="footer-col2">
+            <h3>Company</h3>
+            <div class="footer-link">
+                <a href="about.html">About</a>
+            </div>
+            <div class="footer-link">
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-link">
+                <a href="quote.html">Request a Quote</a>
+            </div>
+            <div class="footer-link">
+                <a href="FAQ.html">FAQ</a>
+            </div>
+        </section>
+        <section class="footer-col2">
+            <h3>Legal</h3>
+            <div class="footer-link">
+                <a href="privacy.html">Privacy</a>
+            </div>
+            <div class="footer-link">
+                <a href="terms.html">Terms</a>
+            </div>
+        </section>
+    </section>
+    <p style="text-align: center; background-color: black; margin: 0px;">Developed by <a
+            href="terraceviewtechnologies.com" style="color: #a6b7d8;">Terrace View Technologies</a></p>
+    <p style="text-align: center; background-color: black; margin: 0px;">© 2026 Corpek Manufacturing, LLC. All
+        rights
+        reserved.</p>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corpek Manufacturing - Modern Fabrication for Real-World Production</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+<body>
+
+    <!-- Netlify Form Detector (Hidden) -->
+    <form enctype='multipart/form-data' hidden method='POST' name='quote-request'>
+        <input type="hidden" name="form-name" value="quote-request" />
+        <input name="bot-field" />
+
+        <input name="name" />
+        <input name="email" />
+        <input name="company" />
+        <input name="phone" />
+        <input name="quantity" />
+        <input name="due_date" />
+        <textarea name="notes"></textarea>
+
+        <!-- ✅ lock file types here too -->
+        <input type="file" name="file" accept=".dxf,.dwg,.step,.stp,.pdf,.zip" />
+    </form>
+
+    <!-- Navbar -->
+    <section class="nav" id="navbar">
+        <a href="index.html"><img src="images/CorpekLogo.jpg" alt="Corpek Manufacturing" class="logo"></img></a>
+        <a href="index.html" class="home">Corpek Manufacturing</a>
+        <a class="serv-link" href="services.html">Services</a>
+        <a href="materials.html">Materials</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="about.html">About</a>
+        <a href="supplier.html">Become a Supplier</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-phone"
+            viewBox="0 0 16 16">
+            <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+        </svg>
+        <a href="tel:+1234567890">234567890</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="quote.html">Get A Quote</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </section>
+
+
+    <!--Cards -->
+    <div class="privacy-card">
+        <div>
+            <h2>Quick Summary</h2>
+        </div>
+
+        <div style="margin: 1rem;">
+            <ul>
+                <li>We use your info to quote, communicate, and fulfill your request.</li>
+                <li>We do not sell your personal information.</li>
+                <li>Files you submit may be shared with trusted manufacturing/finishing partners only as needed to
+                    produce your parts.</li>
+                <li>If you want files deleted after quoting, email us and we’ll confirm deletion.</li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="page-borders-margin"></div>
+
+    <div class="privacy-card">
+        <div>
+            <h2>Information We Collect</h2>
+            <p>When you request a quote or contact us, we may collect:</p>
+        </div>
+
+        <div style="margin: 1rem;">
+            <ul>
+                <li>Contact details (name, email, company if provided)</li>
+                <li>Request details (material, quantity, due date, notes, tolerances, finishing)</li>
+                <li>Design files (DXF/DWG/SVG, STEP/IGES, PDF reference, zip files)</li>
+                <li>Communication history (emails and messages related to your project)</li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="page-borders-margin"></div>
+
+    <div class="privacy-card">
+        <div>
+            <h2>How We Use Information</h2>
+            <p>We use the information you submit to:</p>
+        </div>
+
+        <div style="margin: 1rem;">
+            <ul>
+                <li>Generate and deliver quotes</li>
+                <li>Confirm manufacturability, routing, and scope</li>
+                <li>Coordinate production, finishing, packaging, and delivery</li>
+                <li>Provide project updates and respond to questions</li>
+                <li>Maintain basic business records (invoices, order history, support)</li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="page-borders-margin"></div>
+
+    <div class="privacy-card">
+        <div>
+            <h2>File Handling & Confidentiality</h2>
+            <p>Your files may contain proprietary designs. We treat submitted files as confidential and use them only
+                for quoting and fulfilling your request.</p>
+        </div>
+
+        <div style="display: flex;">
+            <div style="width:45%">
+                <h3>Sharing with partners</h3>
+                <ul>
+                    <li>We may share the minimum required information/files with manufacturing or finishing partners
+                        only as needed to quote or produce parts.</li>
+                </ul>
+            </div>
+            <div style="width: 45%;">
+                <h3>Deletion requests</h3>
+                <ul>
+                    <li>If you want your files deleted after quoting, email us and we’ll confirm deletion (subject to
+                        recordkeeping requirements).</li>
+                </ul>
+            </div>
+        </div>
+        <p style="font-size: 0.8rem;">Note: Email and file-transfer systems have inherent risk. If you require strict
+            handling (NDA, special
+            portals, encryption), tell us up front and we’ll coordinate a process that fits.</p>
+    </div>
+    <div class="page-borders-margin"></div>
+
+    <div class="privacy-card">
+        <div>
+            <h2>Data Retention</h2>
+            <p>We keep information only as long as needed to support quoting, production, customer support, and basic
+                business recordkeeping. If a project is inactive, we may delete files periodically to reduce exposure.
+                You can request deletion at any time.</p>
+        </div>
+    </div>
+    <div class="page-borders-margin"></div>
+
+    <div class="privacy-card">
+        <div>
+            <h2>Security</h2>
+            <p>We use practical safeguards to protect information, including access controls and standard security
+                practices. No method of transmission or storage is 100% secure, so we cannot guarantee absolute security
+                — but we take reasonable steps to reduce risk.</p>
+        </div>
+    </div>
+    <div class="page-borders-margin"></div>
+
+    <div class="privacy-card">
+        <div>
+            <h2>Cookies & Analytics</h2>
+            <p>We may use basic analytics to understand site performance (for example: page views and traffic sources).
+                We do not run ads based on your uploaded files. If analytics tools are used, they may set cookies or
+                collect standard usage data (like browser type and pages visited).</p>
+        </div>
+    </div>
+    <div class="page-borders-margin"></div>
+
+    <div class="privacy-card">
+        <div>
+            <h2>Your Choices</h2>
+        </div>
+
+        <div style="margin: 1rem;">
+            <ul>
+                <li>You can request access, correction, or deletion of your information by contacting us.</li>
+                <li>If you don’t want to submit files through the website, you may email us instead.</li>
+                <li>If your files are export-controlled, regulated, or restricted, do not submit them without confirming
+                    requirements first.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="page-borders-margin"></div>
+
+    <div class="text-button-layout">
+        <div class="top-text">
+            <h2>Contact</h2>
+        </div>
+        <div class="bottom-text">
+            <p>Questions about privacy or file handling? Email us: <strong> quotes@corpekmanufacturing.com</strong>
+            </p>
+        </div>
+        <div class="button">
+            <button class="btn-hover color-8">Contact</button>
+        </div>
+    </div>
+    <p style="font-size: 0.8rem; text-align: center;">This policy is provided for general information and does not
+        constitute legal advice.</p>
+    <div class="page-borders"></div>
+
+    <!-- Footer -->
+    <section class="footer" style="display: flex; justify-content: space-around; padding: 3rem; background: #000000;">
+        <section class="footer-col1">
+            <div style="display: flex;">
+                <img src="images/CorpekLogo.jpg" alt="Corpek Manufacturing" class="logo-bottom"></img>
+                <h2>Corpek Manufacturing</h2>
+            </div>
+            <p>Engineer-reviewed quoting and controlled <br>
+                production workflows for laser-cut and fabricated parts.</p>
+            <p>Email: <a href="mailto:quotes@corpekmanufacturing.com"
+                    style="color: #a6b7d8;">quotes@corpekmanufacturing.com</a><br>
+                Peoria, Illinois</p>
+        </section>
+        <section class="footer-col2">
+            <h3>Explore</h3>
+            <div class="footer-link">
+                <a href="services.html">Services</a>
+            </div>
+            <div class="footer-link">
+                <a href="materials.html">Materials</a>
+            </div>
+            <div class="footer-link">
+                <a href="capabilities.html">Capabilities</a>
+            </div>
+            <div class="footer-link">
+                <a href="about.html">About</a>
+            </div>
+        </section>
+        <section class="footer-col2">
+            <h3>Company</h3>
+            <div class="footer-link">
+                <a href="about.html">About</a>
+            </div>
+            <div class="footer-link">
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-link">
+                <a href="quote.html">Request a Quote</a>
+            </div>
+            <div class="footer-link">
+                <a href="FAQ.html">FAQ</a>
+            </div>
+        </section>
+        <section class="footer-col2">
+            <h3>Legal</h3>
+            <div class="footer-link">
+                <a href="privacy.html">Privacy</a>
+            </div>
+            <div class="footer-link">
+                <a href="terms.html">Terms</a>
+            </div>
+        </section>
+    </section>
+    <p style="text-align: center; background-color: black; margin: 0px;">Developed by <a
+            href="terraceviewtechnologies.com" style="color: #a6b7d8;">Terrace View Technologies</a></p>
+    <p style="text-align: center; background-color: black; margin: 0px;">© 2026 Corpek Manufacturing, LLC. All
+        rights
+        reserved.</p>
+    <script src="script.js"></script>
+</body>
+
+</html>

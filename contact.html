@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corpek Manufacturing - Modern Fabrication for Real-World Production</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+<body>
+
+    <!-- Netlify Form Detector (Hidden) -->
+    <form enctype='multipart/form-data' hidden method='POST' name='quote-request'>
+        <input type="hidden" name="form-name" value="quote-request" />
+        <input name="bot-field" />
+
+        <input name="name" />
+        <input name="email" />
+        <input name="company" />
+        <input name="phone" />
+        <input name="quantity" />
+        <input name="due_date" />
+        <textarea name="notes"></textarea>
+
+        <!-- ✅ lock file types here too -->
+        <input type="file" name="file" accept=".dxf,.dwg,.step,.stp,.pdf,.zip" />
+    </form>
+
+    <!-- Navbar -->
+    <section class="nav" id="navbar">
+        <a href="index.html"><img src="images/CorpekLogo.jpg" alt="Corpek Manufacturing" class="logo"></img></a>
+        <a href="index.html" class="home">Corpek Manufacturing</a>
+        <a class="serv-link" href="services.html">Services</a>
+        <a href="materials.html">Materials</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="about.html">About</a>
+        <a href="supplier.html">Become a Supplier</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-phone"
+            viewBox="0 0 16 16">
+            <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+        </svg>
+        <a href="tel:+1234567890">234567890</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="quote.html">Get A Quote</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </section>
+
+    <!-- Form -->
+    <h2 style=" text-align: center;">Contact Us</h2>
+    <section class="form" style="display: flex; justify-content: center;">
+        <section class="form-layout">
+            <div class="form-name">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name..">
+            </div>
+            <div class="form-email">
+                <label for="name">Email</label>
+                <input type="text" id="name" name="name" placeholder="Your email..">
+            </div>
+            <div class="form-company">
+                <label for="name">Company</label>
+                <input type="text" id="name" name="name" placeholder="Your company..">
+            </div>
+            <div class="form-phone">
+                <label for="name">Phone</label>
+                <input type="text" id="name" name="name" placeholder="Your phone number..">
+            </div>
+            <div class="form-notes">
+                <label for="Message">Message</label>
+                <textarea id="Message" name="Message" placeholder="Send us a message" style="height:200px"></textarea>
+            </div>
+            <div class="form-submit" style="display: flex; justify-content: center;">
+                <button style="width:80vw; justify-self: center;" class="btn-hover color-3">Submit</button>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer" style="display: flex; justify-content: space-around; padding: 3rem; background: #000000;">
+        <section class="footer-col1">
+            <div style="display: flex;">
+                <img src="images/CorpekLogo.jpg" alt="Corpek Manufacturing" class="logo-bottom"></img>
+                <h2>Corpek Manufacturing</h2>
+            </div>
+            <p>Engineer-reviewed quoting and controlled <br>
+                production workflows for laser-cut and fabricated parts.</p>
+            <p>Email: <a href="mailto:quotes@corpekmanufacturing.com"
+                    style="color: #a6b7d8;">quotes@corpekmanufacturing.com</a><br>
+                Peoria, Illinois</p>
+        </section>
+        <section class="footer-col2">
+            <h3>Explore</h3>
+            <div class="footer-link">
+                <a href="services.html">Services</a>
+            </div>
+            <div class="footer-link">
+                <a href="materials.html">Materials</a>
+            </div>
+            <div class="footer-link">
+                <a href="capabilities.html">Capabilities</a>
+            </div>
+            <div class="footer-link">
+                <a href="about.html">About</a>
+            </div>
+        </section>
+        <section class="footer-col2">
+            <h3>Company</h3>
+            <div class="footer-link">
+                <a href="about.html">About</a>
+            </div>
+            <div class="footer-link">
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-link">
+                <a href="quote.html">Request a Quote</a>
+            </div>
+            <div class="footer-link">
+                <a href="FAQ.html">FAQ</a>
+            </div>
+        </section>
+        <section class="footer-col2">
+            <h3>Legal</h3>
+            <div class="footer-link">
+                <a href="privacy.html">Privacy</a>
+            </div>
+            <div class="footer-link">
+                <a href="terms.html">Terms</a>
+            </div>
+        </section>
+    </section>
+    <p style="text-align: center; background-color: black; margin: 0px;">Developed by <a
+            href="terraceviewtechnologies.com" style="color: #a6b7d8;">Terrace View Technologies</a></p>
+    <p style="text-align: center; background-color: black; margin: 0px;">© 2026 Corpek Manufacturing, LLC. All
+        rights
+        reserved.</p>
+    <script src="script.js"></script>
+</body>
+
+</html>

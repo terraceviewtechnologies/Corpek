@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corpek Manufacturing - Modern Fabrication for Real-World Production</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+<body>
+
+    <!-- Netlify Form Detector (Hidden) -->
+    <form enctype='multipart/form-data' hidden method='POST' name='quote-request'>
+        <input type="hidden" name="form-name" value="quote-request" />
+        <input name="bot-field" />
+
+        <input name="name" />
+        <input name="email" />
+        <input name="company" />
+        <input name="phone" />
+        <input name="quantity" />
+        <input name="due_date" />
+        <textarea name="notes"></textarea>
+
+        <!-- ✅ lock file types here too -->
+        <input type="file" name="file" accept=".dxf,.dwg,.step,.stp,.pdf,.zip" />
+    </form>
+
+    <!-- Navbar -->
+    <section class="nav" id="navbar">
+        <a href="index.html"><img src="images/CorpekLogo.jpg" alt="Corpek Manufacturing" class="logo"></img></a>
+        <a href="index.html" class="home">Corpek Manufacturing</a>
+        <a class="serv-link" href="services.html">Services</a>
+        <a href="materials.html">Materials</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="about.html">About</a>
+        <a href="supplier.html">Become a Supplier</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-phone"
+            viewBox="0 0 16 16">
+            <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+        </svg>
+        <a href="tel:+1234567890">234567890</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="quote.html">Get A Quote</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </section>
+
+    <!--Hero -->
+
+    <div class="wrap">
+        <img src="images/milling.jpg" alt="Corpek Manufacturing" class="hero-background"></img>
+        <section class="hero-layout">
+            <section class="hero-text">
+                <h1 class="hero-header">Become a Corpek Manufacturing Supplier</h1>
+                <h2>Corpek partners with machining, fabrication, finishing, and assembly companies across Central
+                    Illinois <br> to help deliver production-ready parts for industrial customers.</h2>
+            </section>
+            <section class="hero-buttons">
+                <a href="quote.html"><button class="btn-hover color-8" style="margin-left: 0;">Get Started</button></a>
+                <a href="capabilities.html"><button class="btn-hover color-3" style="margin-left: 0;">View
+                        Capabilities</button></a>
+            </section>
+
+            <section class="sm-card1">
+                <div class="sm-card-top">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="svg-img"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5" />
+                        <path
+                            d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z" />
+                    </svg>
+                    <p>New Opportunities</p>
+                </div>
+                <div class="sm-card-bottom">
+                    <p>Access RFQs and production opportunities from regional industrial customers.</p>
+                </div>
+            </section>
+            <section class="sm-card2">
+                <div class="sm-card-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="svg-img"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                    </svg>
+                    <p>Clear Communication</p>
+                </div>
+                <div class="sm-card-bottom">
+                    <p>Work with an engineering-focused front end that helps streamline quoting and project flow.</p>
+                </div>
+
+            </section>
+            <section class="sm-card3">
+                <div class="sm-card-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="svg-img"
+                        viewBox="0 0 24 24">
+                        <path
+                            d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z" />
+                    </svg>
+                    <p>Long-Term Relationships</p>
+                </div>
+                <div class="sm-card-bottom">
+                    <p>Corpek is focused on building lasting supplier partnerships, not one-off transactions.</p>
+                </div>
+            </section>
+    </div>
+    <div class="page-borders"></div>
+
+
+
+    <div class="supplier-mid">
+        <div class="capabilities-supplier-card">
+            <h2>Capabilities we're looking for</h2>
+            <div class="list-cols">
+                <ul>
+                    <li>CNC Machining</li>
+                    <li>Laser Cutting</li>
+                    <li>Waterjet Cutting</li>
+                    <li>Press Brake Forming</li>
+                </ul>
+                <ul>
+                    <li>Welding & Fabrication</li>
+                    <li>Powder Coating</li>
+                    <li>Tube Bending</li>
+                    <li>Assembly</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="capabilities-supplier-card">
+            <h2 class="text-2xl font-semibold mb-4">What makes a strong supplier fit</h2>
+            <ul class="space-y-4 text-gray-300">
+                <li class="flex gap-3">
+                    <i data-feather="check-circle" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+                    <span>Reliable quoting and communication</span>
+                </li>
+                <li class="flex gap-3">
+                    <i data-feather="check-circle" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+                    <span>Consistent quality and realistic lead times</span>
+                </li>
+                <li class="flex gap-3">
+                    <i data-feather="check-circle" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+                    <span>Ability to support repeat industrial work</span>
+                </li>
+                <li class="flex gap-3">
+                    <i data-feather="check-circle" class="w-5 h-5 text-primary shrink-0 mt-0.5"></i>
+                    <span>Willingness to build a long-term working relationship</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <h2 style=" text-align: center;">Supplier Intrest Form</h2>
+    <p style=" text-align: center;">Tell us a little about your shop and capabilities. We’ll review your information and
+        reach out if there looks to
+        be a fit.</p>
+    <section class="form" style="display: flex; justify-content: center;">
+        <section class="form-layout-supplier">
+            <div class="form-name">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name..">
+            </div>
+            <div class="form-email">
+                <label for="name">Email</label>
+                <input type="text" id="name" name="name" placeholder="Your email..">
+            </div>
+            <div class="form-company">
+                <label for="name">Company</label>
+                <input type="text" id="name" name="name" placeholder="Your company..">
+            </div>
+            <div class="form-phone">
+                <label for="name">Phone</label>
+                <input type="text" id="name" name="name" placeholder="Your phone number..">
+            </div>
+            <div class="capabilities-text">
+                <p style="font-size: 22px;">Capabilities</p>
+            </div>
+            <div class="form-check">
+                <div class="check-col">
+                    <label class="container">CNC Machining
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Press Brake Forming
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Tube Bending
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="check-col">
+                    <label class="container">Laser Cutting
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Welding & Fabrication
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Assembly
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="check-col">
+                    <label class="container">Waterjet Cutting
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Powder Coating
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Other
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-equip">
+                <label for="Message">Equipment Summary</label>
+                <textarea id="Message" name="Message"
+                    placeholder="List major equipment, machine types, lasers, brakes, weld capabilities, etc."
+                    style="height:200px"></textarea>
+            </div>
+            <div class="form-industries">
+                <label for="name">Industries Served</label>
+                <input type="text" id="name" name="name"
+                    placeholder="Agriculture, heavy equipment, industrial automation, food equipment, etc.">
+            </div>
+            <div class="form-certs">
+                <label for="name">Certifications</label>
+                <input type="text" id="name" name="name" placeholder="ISO 9001, ITAR, AS9100, none, etc.">
+            </div>
+            <div class="form-notes">
+                <label for="Message">Additional Notes</label>
+                <textarea id="Message" name="Message"
+                    placeholder="Anything else you'd like Corpek to know about your shop."
+                    style="height:200px"></textarea>
+            </div>
+            <div class="form-submit" style="display: flex; justify-content: center;">
+                <button style="width:80vw; justify-self: center;" class="btn-hover color-3">Submit</button>
+            </div>
+        </section>
+    </section>
+
+
+
+    <!-- Footer -->
+    <section class="footer" style="display: flex; justify-content: space-around; padding: 3rem; background: #000000;">
+        <section class="footer-col1">
+            <div style="display: flex;">
+                <img src="images/CorpekLogo.jpg" alt="Corpek Manufacturing" class="logo-bottom"></img>
+                <h2>Corpek Manufacturing</h2>
+            </div>
+            <p>Engineer-reviewed quoting and controlled <br>
+                production workflows for laser-cut and fabricated parts.</p>
+            <p>Email: <a href="mailto:quotes@corpekmanufacturing.com"
+                    style="color: #a6b7d8;">quotes@corpekmanufacturing.com</a><br>
+                Peoria, Illinois</p>
+        </section>
+        <section class="footer-col2">
+            <h3>Explore</h3>
+            <div class="footer-link">
+                <a href="services.html">Services</a>
+            </div>
+            <div class="footer-link">
+                <a href="materials.html">Materials</a>
+            </div>
+            <div class="footer-link">
+                <a href="capabilities.html">Capabilities</a>
+            </div>
+            <div class="footer-link">
+                <a href="about.html">About</a>
+            </div>
+        </section>
+        <section class="footer-col2">
+            <h3>Company</h3>
+            <div class="footer-link">
+                <a href="about.html">About</a>
+            </div>
+            <div class="footer-link">
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-link">
+                <a href="quote.html">Request a Quote</a>
+            </div>
+            <div class="footer-link">
+                <a href="FAQ.html">FAQ</a>
+            </div>
+        </section>
+        <section class="footer-col2">
+            <h3>Legal</h3>
+            <div class="footer-link">
+                <a href="privacy.html">Privacy</a>
+            </div>
+            <div class="footer-link">
+                <a href="terms.html">Terms</a>
+            </div>
+        </section>
+    </section>
+    <p style="text-align: center; background-color: black; margin: 0px;">Developed by <a
+            href="terraceviewtechnologies.com" style="color: #a6b7d8;">Terrace View Technologies</a></p>
+    <p style="text-align: center; background-color: black; margin: 0px;">© 2026 Corpek Manufacturing, LLC. All
+        rights
+        reserved.</p>
+    <script src="script.js"></script>
+</body>
+
+</html>

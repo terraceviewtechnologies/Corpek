@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corpek Manufacturing - Modern Fabrication for Real-World Production</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+<body>
+
+    <!-- Netlify Form Detector (Hidden) -->
+    <form enctype='multipart/form-data' hidden method='POST' name='quote-request'>
+        <input type="hidden" name="form-name" value="quote-request" />
+        <input name="bot-field" />
+
+        <input name="name" />
+        <input name="email" />
+        <input name="company" />
+        <input name="phone" />
+        <input name="quantity" />
+        <input name="due_date" />
+        <textarea name="notes"></textarea>
+
+        <!-- ✅ lock file types here too -->
+        <input type="file" name="file" accept=".dxf,.dwg,.step,.stp,.pdf,.zip" />
+    </form>
+
+    <!-- Navbar -->
+    <section class="nav" id="navbar">
+        <a href="index.html"><img src="images/CorpekLogo.jpg" alt="Corpek Manufacturing" class="logo"></img></a>
+        <a href="index.html" class="home">Corpek Manufacturing</a>
+        <a class="serv-link" href="services.html">Services</a>
+        <a href="materials.html">Materials</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="about.html">About</a>
+        <a href="supplier.html">Become a Supplier</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-phone"
+            viewBox="0 0 16 16">
+            <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+        </svg>
+        <a href="tel:+1234567890">234567890</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="quote.html">Get A Quote</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </section>
+
+
+
+
+    <div class="wrap">
+        <img src="images/steel.jpg" alt="Corpek Manufacturing" class="hero-background"></img>
+
+        <section class="hero-nocard-layout">
+            <section class="hero-text">
+                <h2 class="hero-header">Practical Materials, Ready for Production</h2>
+                <h2>We support common production materials for laser cutting and
+                    fabrication.<br>
+                    If you don’t see something listed, upload the file and tell us what you need — we’ll confirm
+                    availability and lead time in the quote.</h2>
+            </section>
+            <section class="hero-buttons">
+                <a href="quote.html"><button class="btn-hover color-8" style="margin-left: 0;">Get Started</button></a>
+                <a href="capabilities.html"><button class="btn-hover color-3" style="margin-left: 0;">View
+                        Capabilities</button></a>
+            </section>
+
+            <section class="hero-text-bottom">
+                <p>Typical: quotes within 36 hours • delivery 4–6 days (scope dependent)</p>
+            </section>
+        </section>
+
+        <h2 style="text-align: center; position: relative;">Materials We Use</h2>
+
+        <section style="position: relative;" class="accordion">
+            <div class="tab">
+                <input type="checkbox" name="accordion-1" id="cb1">
+                <label for="cb1" class="tab__label">Steel and Coated Steel</label>
+                <div class="tab__content">
+                    <p style="font-size: 1.25rem;">Best value for brackets, mounts, frames, and general fabrication.
+                    </p>
+                    <ul>
+                        <li>Mild Steel (A36 / 1008 / 1018)</li>
+                        <li>Galvanized (G90)</li>
+                        <li>Spring Steel (1075 / 1095) — limited</li>
+                        <li>Wear Plate (AR400 / AR500) — limited</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-borders"></div>
+            <div class="tab">
+                <input type="checkbox" name="accordion-1" id="cb2">
+                <label for="cb2" class="tab__label">Stainless</label>
+                <div class="tab__content">
+                    <p style="font-size: 1.25rem;">Corrosion resistant for washdown, outdoor, and harsh environments.
+                    </p>
+                    <ul>
+                        <li>304 Stainless</li>
+                        <li>316 Stainless</li>
+                        <li>Other stainless grades by request</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-borders"></div>
+            <div class="tab">
+                <input type="checkbox" name="accordion-1" id="cb3">
+                <label for="cb3" class="tab__label">Aluminum</label>
+                <div class="tab__content">
+                    <p style="font-size: 1.25rem;">Lightweight parts, panels, enclosures, and bent sheet applications.
+                    </p>
+                    <ul>
+                        <li>5052-H32</li>
+                        <li>6061-T6</li>
+                        <li>7075-T6 (limited)</li>
+                        <li>2024-T3 (limited)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-borders"></div>
+            <div class="tab">
+                <input type="checkbox" name="accordion-1" id="cb4">
+                <label for="cb4" class="tab__label">Plastics</label>
+                <div class="tab__content">
+                    <p style="font-size: 1.25rem;">Covers routed profiles, guards, panels, and non-metal components.
+                    </p>
+                    <ul>
+                        <li>ABS, Acrylic, Polycarbonate</li>
+                        <li>HDPE, UHMW, Delrin</li>
+                        <li>Carbon Fiber (process dependent) — limited</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="page-borders"></div>
+            <div class="tab">
+                <input type="checkbox" name="accordion-1" id="cb4">
+                <label for="cb4" class="tab__label">Specialty</label>
+                <div class="tab__content">
+                    <p style="font-size: 1.25rem;">Quoted case-by-case based on thickness, process, and sourcing.
+                    </p>
+                    <ul>
+                        <li>AR Plate</li>
+                        <li>Titanium</li>
+                        <li>Carbon Fiber</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <p style="text-align: center;">Note: Options vary by thickness, process routing, and material availability.
+            Final
+            selection is confirmed in your quote.</p>
+        <div class="page-borders"></div>
+    </div>
+
+    <div class="text-button-layout">
+        <div class="top-text">
+            <h3>Don’t see your material?</h3>
+        </div>
+        <div class="bottom-text">
+            <p>Upload the file and put the material, thickness, quantity, and due date in the notes. We’ll confirm
+                availability and the most reliable process.</p>
+        </div>
+        <div class="button" style="display: flex; justify-content: center;">
+            <a href="quote.html"><button style="margin-bottom: 0; " class=" btn-hover color-8">Upload a
+                    File</button></a>
+        </div>
+    </div>
+    </div>
+    <div class="page-borders"></div>
+
+    <!-- Footer -->
+    <section class="footer" style="display: flex; justify-content: space-around; padding: 3rem; background: #000000;">
+        <section class="footer-col1">
+            <div style="display: flex;">
+                <img src="images/CorpekLogo.jpg" alt="Corpek Manufacturing" class="logo-bottom"></img>
+                <h2>Corpek Manufacturing</h2>
+            </div>
+            <p>Engineer-reviewed quoting and controlled <br>
+                production workflows for laser-cut and fabricated parts.</p>
+            <p>Email: <a href="mailto:quotes@corpekmanufacturing.com"
+                    style="color: #a6b7d8;">quotes@corpekmanufacturing.com</a><br>
+                Peoria, Illinois</p>
+        </section>
+        <section class="footer-col2">
+            <h3>Explore</h3>
+            <div class="footer-link">
+                <a href="services.html">Services</a>
+            </div>
+            <div class="footer-link">
+                <a href="materials.html">Materials</a>
+            </div>
+            <div class="footer-link">
+                <a href="capabilities.html">Capabilities</a>
+            </div>
+            <div class="footer-link">
+                <a href="about.html">About</a>
+            </div>
+        </section>
+        <section class="footer-col2">
+            <h3>Company</h3>
+            <div class="footer-link">
+                <a href="about.html">About</a>
+            </div>
+            <div class="footer-link">
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-link">
+                <a href="quote.html">Request a Quote</a>
+            </div>
+            <div class="footer-link">
+                <a href="FAQ.html">FAQ</a>
+            </div>
+        </section>
+        <section class="footer-col2">
+            <h3>Legal</h3>
+            <div class="footer-link">
+                <a href="privacy.html">Privacy</a>
+            </div>
+            <div class="footer-link">
+                <a href="terms.html">Terms</a>
+            </div>
+        </section>
+    </section>
+    <p style="text-align: center; background-color: black; margin: 0px;">Developed by <a
+            href="terraceviewtechnologies.com" style="color: #a6b7d8;">Terrace View Technologies</a></p>
+    <p style="text-align: center; background-color: black; margin: 0px;">© 2026 Corpek Manufacturing, LLC. All
+        rights
+        reserved.</p>
+    <script src="script.js"></script>
+</body>
+
+</html>

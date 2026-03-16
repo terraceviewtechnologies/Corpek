@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corpek Manufacturing - Modern Fabrication for Real-World Production</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+<body>
+
+    <!-- Netlify Form Detector (Hidden) -->
+    <form enctype='multipart/form-data' hidden method='POST' name='quote-request'>
+        <input type="hidden" name="form-name" value="quote-request" />
+        <input name="bot-field" />
+
+        <input name="name" />
+        <input name="email" />
+        <input name="company" />
+        <input name="phone" />
+        <input name="quantity" />
+        <input name="due_date" />
+        <textarea name="notes"></textarea>
+
+        <!-- ✅ lock file types here too -->
+        <input type="file" name="file" accept=".dxf,.dwg,.step,.stp,.pdf,.zip" />
+    </form>
+
+    <!-- Navbar -->
+    <section class="nav" id="navbar">
+        <a href="index.html" style="padding:0;"><img src="images/CorpekLogo.jpg" alt="Corpek Manufacturing"
+                class="logo"></img></a>
+        <a class="serv-link" href="services.html">Services</a>
+        <a href="materials.html">Materials</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="about.html">About</a>
+        <a href="supplier.html">Become a Supplier</a>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-phone"
+            viewBox="0 0 16 16">
+            <path
+                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+        </svg>
+        <a href="tel:+1234567890">234567890</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="quote.html">Get A Quote</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </section>
+
+    <!-- Hero -->
+    <div class="wrap">
+        <img src="images/hero.jpg" alt="Corpek Manufacturing" class="hero-background"></img>
+        <section class="hero-layout">
+            <section class="hero-text">
+                <h2 class="hero-header">Modern Fabrication for Real-World Production</h2>
+                <h2>Upload your design and get a human-reviewed quote (typically within 36 hours).<br>
+                    We manage the workflow — cut, form, and finishing — with clear lead times and clean delivery.</h2>
+            </section>
+            <section class="hero-buttons">
+                <a href="quote.html"><button class="btn-hover color-8" style="margin-left: 0;">Get Started</button></a>
+                <a href="capabilities.html"><button class="btn-hover color-3" style="margin-left: 0;">View
+                        Capabilities</button></a>
+            </section>
+
+            <section class="sm-card1">
+                <div class="sm-card-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="svg-img">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <p>Quote turnaround</p>
+                </div>
+                <div class="sm-card-bottom">
+                    <p>Typically within 36 hours.</p>
+                </div>
+            </section>
+            <section class="sm-card2">
+                <div class="sm-card-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="svg-img">
+                        <rect x="1" y="3" width="15" height="13"></rect>
+                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                        <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                        <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                        <rect x="1" y="3" width="15" height="13"></rect>
+                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                        <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                        <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+                    <p>Typical lead time</p>
+                </div>
+                <div class="sm-card-bottom">
+                    <p>4–6 business days for many jobs (quoted).</p>
+                </div>
+
+            </section>
+            <section class="sm-card3">
+                <div class="sm-card-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="svg-img">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <p>Midwest-based</p>
+                </div>
+                <div class="sm-card-bottom">
+                    <p>Peoria, IL • Shipping & local coordination.</p>
+                </div>
+
+            </section>
+            <section class="hero-text-bottom">
+                <div class="svg-txt">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg-check" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path
+                            d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+                    </svg>
+                    <p>Engineering review before release</p>
+                </div>
+                <div class="svg-txt">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg-check" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path
+                            d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+                    </svg>
+                    <p>Standard + expedite options</p>
+                </div>
+                <div class="svg-txt">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="svg-check" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path
+                            d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05" />
+                    </svg>
+                    <p>Local receiving & delivery coordination (Peoria, IL)</p>
+                </div>
+            </section>
+            <section class=fine>
+                <p style="font-size: 0.75rem;">Lead time depends on material, quantity, and finishing.
+                    We confirm standard vs
+                    expedite options in your
+                    quote.</p>
+            </section>
+        </section>
+    </div>
+    <div class="page-borders"></div>
+
+    <!-- Section 2 -->
+    <section class="sect2">
+        <section class="text-button-4card-layout">
+            <div class="text">
+                <h3> Production-ready parts without the runaround</h3>
+                <p>Corpek is built for quick-turn fabrication, short-run production, and jobs that need clean
+                    coordination
+                    across operations.</p>
+            </div>
+            <div class="button">
+                <a href="capabilities.html"><button class="btn-hover color-8" style="margin-right: 0;">Explore
+                        Capabilities</button></a>
+            </div>
+            <div class="sm-card1">
+                <div class="sm-card-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3.5 3.5c-.614-.884-.074-1.962.858-2.5L8 7.226 11.642 1c.932.538 1.472 1.616.858 2.5L8.81 8.61l1.556 2.661a2.5 2.5 0 1 1-.794.637L8 9.73l-1.572 2.177a2.5 2.5 0 1 1-.794-.637L7.19 8.61zm2.5 10a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0m7 0a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0" />
+                    </svg>
+                    <p>Cutting</p>
+                </div>
+                <div class="sm-card-bottom">
+                    <p> Laser-cut parts, plates, panels, and profiles.</p>
+                </div>
+            </div>
+            <div class="sm-card2">
+                <div class="sm-card-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M14.854 4.854a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 4H3.5A2.5 2.5 0 0 0 1 6.5v8a.5.5 0 0 0 1 0v-8A1.5 1.5 0 0 1 3.5 5h9.793l-3.147 3.146a.5.5 0 0 0 .708.708z" />
+                    </svg>
+                    <p>Forming</p>
+                </div>
+                <div class="sm-card-bottom">
+                    <p>Simple bends to production-ready formed sheet metal.</p>
+                </div>
+            </div>
+            <div class="sm-card3">
+                <div class="sm-card-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5m0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78zM5.048 3.967l-.087.065zm-.431.355A4.98 4.98 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8zm.344 7.646.087.065z" />
+                    </svg>
+                    <p>Basic machining</p>
+                </div>
+                <div class="sm-card-bottom">
+                    <p>Secondary ops and light machining when needed.</p>
+                </div>
+            </div>
+            <div class="sm-card4">
+                <div class="sm-card-top">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z" />
+                    </svg>
+                    <p>Assembly + finish</p>
+                </div>
+                <div class="sm-card-bottom">
+                    <p>Hardware insertion, labeling, kitting, and finishing.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <div class="page-borders"></div>
+
+    <!-- Section 3 -->
+
+    <div class="wrap">
+        <section class="sect3">
+            <img src="images/gears.jpg" alt="Gear Bckground" class="hero-background"></img>
+            <section class="text-center-3card-layout">
+                <div class="center-text">
+                    <h4>Process</h4>
+                    <h2>How It Works</h2>
+                    <p>Simple intake, clear communication, controlled execution.</p>
+                </div>
+                <div class="lg-card1">
+                    <div class="lg-card-top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                            class="bi bi-1-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M9.283 4.002H7.971L6.072 5.385v1.271l1.834-1.318h.065V12h1.312z" />
+                        </svg>
+                    </div>
+                    <div class="lg-card-bottom">
+                        <p>Upload Your Design<br>
+                            Send your file and requirements (material, quantity, due date, and any critical features).
+                        </p>
+                    </div>
+
+                </div>
+                <div class="lg-card2">
+                    <div class="lg-card-top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                            class="bi bi-2-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.646 6.24c0-.691.493-1.306 1.336-1.306.756 0 1.313.492 1.313 1.236 0 .697-.469 1.23-.902 1.705l-2.971 3.293V12h5.344v-1.107H7.268v-.077l1.974-2.22.096-.107c.688-.763 1.287-1.428 1.287-2.43 0-1.266-1.031-2.215-2.613-2.215-1.758 0-2.637 1.19-2.637 2.402v.065h1.271v-.07Z" />
+                        </svg>
+                    </div>
+                    <div class="lg-card-bottom">
+                        <p>Quote (Reviewed)<br>
+                            We verify manufacturability and send pricing — typically within 36 hours.</p>
+                    </div>
+
+                </div>
+                <div class="lg-card3">
+                    <div class="lg-card-top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                            class="bi bi-3-circle-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-8.082.414c.92 0 1.535.54 1.541 1.318.012.791-.615 1.36-1.588 1.354-.861-.006-1.482-.469-1.54-1.066H5.104c.047 1.177 1.05 2.144 2.754 2.144 1.653 0 2.954-.937 2.93-2.396-.023-1.278-1.031-1.846-1.734-1.916v-.07c.597-.1 1.505-.739 1.482-1.876-.03-1.177-1.043-2.074-2.637-2.062-1.675.006-2.59.984-2.625 2.12h1.248c.036-.556.557-1.054 1.348-1.054.785 0 1.348.486 1.348 1.195.006.715-.563 1.237-1.342 1.237h-.838v1.072h.879Z" />
+                        </svg>
+                    </div>
+                    <div class="lg-card-bottom">
+                        <p>Production + Delivery<br>
+                            We run the job through the required operations and deliver with the agreed lead time —
+                            including
+                            packaging, labeling, or kitting if needed.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <div class="page-borders"></div>
+
+        <!-- Section 4 -->
+        <section class="sect4">
+            <section class="text-button-4card-layout">
+                <div class="text">
+                    <h3>Production Controls (What you get with Corpek)</h3>
+                    <p>Repeatable outcomes — not “good luck, see you in a week.” If something is unclear, we flag it
+                        before
+                        production.</p>
+                </div>
+                <div class="button">
+                    <a href="quote.html"><button class="btn-hover color-3">Upload A File</button></a>
+                </div>
+                <div class="sm-card1">
+                    <div class="sm-card-top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="svg-img" viewBox="0 0 16 16">
+                            <path
+                                d="M.102 2.223A3.004 3.004 0 0 0 3.78 5.897l6.341 6.252A3.003 3.003 0 0 0 13 16a3 3 0 1 0-.851-5.878L5.897 3.781A3.004 3.004 0 0 0 2.223.1l2.141 2.142L4 4l-1.757.364zm13.37 9.019.528.026.287.445.445.287.026.529L15 13l-.242.471-.026.529-.445.287-.287.445-.529.026L13 15l-.471-.242-.529-.026-.287-.445-.445-.287-.026-.529L11 13l.242-.471.026-.529.445-.287.287-.445.529-.026L13 11z" />
+                        </svg>
+                        <p>DFM Review</p>
+                    </div>
+                    <div class="sm-card-bottom">
+                        <p>Bend relief, hole-to-edge, hardware, tolerance risks flagged early.</p>
+                    </div>
+                </div>
+                <div class="sm-card2">
+                    <div class="sm-card-top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="svg-img" viewBox="0 0 16 16">
+                            <path
+                                d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0m-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+                        </svg>
+                        <p>Revision Control</p>
+                    </div>
+                    <div class="sm-card-bottom">
+                        <p>We confirm the correct file/version before release.</p>
+                    </div>
+                </div>
+                <div class="sm-card3">
+                    <div class="sm-card-top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="svg-img" viewBox="0 0 16 16">
+                            <path
+                                d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                            <path
+                                d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
+                        </svg>
+                        <p>Quality Checks</p>
+                    </div>
+                    <div class="sm-card-bottom">
+                        <p>Counts, obvious defects, and critical callouts checked.</p>
+                    </div>
+                </div>
+                <div class="sm-card4">
+                    <div class="sm-card-top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="svg-img" viewBox="0 0 16 16">
+                            <path
+                                d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z" />
+                        </svg>
+                        <p>Packaging</p>
+                    </div>
+                    <div class="sm-card-bottom">
+                        <p>Protective packaging, labeling, and kitting available.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <div class="page-borders"></div>
+    </div>
+
+    <!-- Section 5 -->
+    <section class="text-center-4card-layout">
+        <div class="center-text">
+            <h4>Use Cases</h4>
+            <h2>Built for Midwest Industry</h2>
+            <p>Practical fabrication for agriculture, industrial equipment, and day-to-day<br>
+                manufacturing needs — from prototypes to short-run production.</p>
+        </div>
+        <div class="sm-card1">
+            <div class="sm-card-top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5m0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78zM5.048 3.967l-.087.065zm-.431.355A4.98 4.98 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8zm.344 7.646.087.065z" />
+                </svg>
+                <p>Industrial equipment</p>
+            </div>
+            <div class="sm-card-bottom">
+                <p>Brackets, gussets, mounts, guards, and light assemblies.</p>
+            </div>
+        </div>
+        <div class="sm-card2">
+            <div class="sm-card-top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777z" />
+                </svg>
+                <p>Agriculture & outdoors</p>
+            </div>
+            <div class="sm-card-bottom">
+                <p>Wear plates, panels, reinforcement parts, and replacement components.</p>
+            </div>
+        </div>
+        <div class="sm-card3">
+            <div class="sm-card-top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0m-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+                </svg>
+                <p>Automation & robotics</p>
+            </div>
+            <div class="sm-card-bottom">
+                <p>Small precision brackets, plates, frames, and enclosures.</p>
+            </div>
+        </div>
+        <div class="sm-card4">
+            <div class="sm-card-top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M6.804 8 1 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C.713 12.69 0 12.345 0 11.692V4.308c0-.653.713-.998 1.233-.696z" />
+                    <path
+                        d="M14.804 8 9 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C8.713 12.69 8 12.345 8 11.692V4.308c0-.653.713-.998 1.233-.696z" />
+                </svg>
+                <p>MRO / maintenance</p>
+            </div>
+            <div class="sm-card-bottom">
+                <p>Fast replacement parts when downtime matters.</p>
+            </div>
+        </div>
+    </section>
+    <div class="page-borders"></div>
+
+    <!-- Section 6 -->
+    <div class="wrap">
+        <img src="images/machine.jpg" alt="Corpek Manufacturing" class="hero-background"></img>
+        <section class="sect6">
+            <section class="text-button-4card-layout">
+                <div class="text">
+                    <h3>Parts we regularly quote</h3>
+                    <p>If it’s cut, formed, or needs clean coordination across operations — we’re built for it.</p>
+                </div>
+                <div class="button">
+                    <a href="quote.html"><button class="btn-hover color-3">Request a Quote</button></a>
+                </div>
+                <div class="sm-card1">
+                    <p>DFM Review<br>
+                        Bend relief, hole-to-edge, hardware, tolerance risks flagged early.</p>
+                </div>
+                <div class="sm-card2">
+                    <p>Revision Control<br>
+                        We confirm the correct file/version before release.</p>
+                </div>
+                <div class="sm-card3">
+                    <p>Quality Checks<br>
+                        Counts, obvious defects, and critical callouts checked.</p>
+                </div>
+                <div class="sm-card4">
+                    <p>Packaging <br>
+                        Protective packaging, labeling, and kitting available.</p>
+                </div>
+            </section>
+        </section>
+        <div class="page-borders"></div>
+
+        <!-- Section 7 -->
+
+        <section class="sect7">
+            <section class="text-center-3card-layout">
+                <div class="center-text">
+                    <h4>Materials</h4>
+                    <h2>Practical Materials, Ready for Production</h2>
+                    <p>Common steels, stainless, aluminum, and plastics — plus sourcing options when you need something
+                        specific. <a class="inline-link" href="materials.html">Browse materials →</a></p>
+                </div>
+                <div class="lg-card1">
+                    <div class="lg-card-top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-buildings-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M15 .5a.5.5 0 0 0-.724-.447l-8 4A.5.5 0 0 0 6 4.5v3.14L.342 9.526A.5.5 0 0 0 0 10v5.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V14h1v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zM2 11h1v1H2zm2 0h1v1H4zm-1 2v1H2v-1zm1 0h1v1H4zm9-10v1h-1V3zM8 5h1v1H8zm1 2v1H8V7zM8 9h1v1H8zm2 0h1v1h-1zm-1 2v1H8v-1zm1 0h1v1h-1zm3-2v1h-1V9zm-1 2h1v1h-1zm-2-4h1v1h-1zm3 0v1h-1V7zm-2-2v1h-1V5zm1 0h1v1h-1z" />
+                        </svg>
+                    </div>
+                    <div class="lg-card-bottom">
+                        <h2>Steel </h2>
+                        <p>Mild steel, stainless steel, and galvanized options in production-friendly thicknesses.</p>
+                    </div>
+
+                </div>
+                <div class="lg-card2">
+                    <div class="lg-card-top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-layers" viewBox="0 0 16 16">
+                            <path
+                                d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882zm3.515 7.008L14.438 10 8 13.433 1.562 10 4.25 8.567l3.515 1.874a.5.5 0 0 0 .47 0zM8 9.433 1.562 6 8 2.567 14.438 6z" />
+                        </svg>
+                    </div>
+                    <div class="lg-card-bottom">
+                        <h2>Aluminum</h2>
+                        <p>5052 and 6061 aluminum for lightweight, corrosion-resistant components.</p>
+                    </div>
+
+                </div>
+                <div class="lg-card3">
+                    <div class="lg-card-top">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-cpu-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+                            <path
+                                d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1zm1 4.5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3A1.5 1.5 0 0 1 6.5 5" />
+                        </svg>
+                    </div>
+                    <div class="lg-card-bottom">
+                        <h2>Plastics</h2>
+                        <p>Acrylic, polycarbonate, HDPE, and more for cut-to-shape plastic parts.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+    <div class="page-borders"></div>
+
+    <!-- Section 8 -->
+
+    <section class="text-center-4card-layout">
+        <div class="center-text">
+            <h4>Who we help</h4>
+            <h2>Built for teams who need parts to show up right</h2>
+            <p>We work with practical, production-minded buyers who want clear lead times, clean communication, and
+                repeatable outcomes.</p>
+        </div>
+        <div class="sm-card1">
+            <div class="sm-card-top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5m0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78zM5.048 3.967l-.087.065zm-.431.355A4.98 4.98 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8zm.344 7.646.087.065z" />
+                </svg>
+                <p>Fabricators & weld shops</p>
+            </div>
+            <div class="sm-card-bottom">
+                <p>Overflow cutting/forming, repeatable components, and quick-turn needs.</p>
+            </div>
+        </div>
+        <div class="sm-card2">
+            <div class="sm-card-top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                    viewBox="0 0 16 16">
+                    <path d="M12.496 8a4.5 4.5 0 0 1-1.703 3.526L9.497 8.5l2.959-1.11q.04.3.04.61" />
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-1 0a7 7 0 1 0-13.202 3.249l1.988-1.657a4.5 4.5 0 0 1 7.537-4.623L7.497 6.5l1 2.5 1.333 3.11c-.56.251-1.18.39-1.833.39a4.5 4.5 0 0 1-1.592-.29L4.747 14.2A7 7 0 0 0 15 8m-8.295.139a.25.25 0 0 0-.288-.376l-1.5.5.159.474.808-.27-.595.894a.25.25 0 0 0 .287.376l.808-.27-.595.894a.25.25 0 0 0 .287.376l1.5-.5-.159-.474-.808.27.596-.894a.25.25 0 0 0-.288-.376l-.808.27z" />
+                </svg>
+                <p>OEMs & small manufacturers</p>
+            </div>
+            <div class="sm-card-bottom">
+                <p>Short runs, revision control, and dependable delivery.</p>
+            </div>
+        </div>
+        <div class="sm-card3">
+            <div class="sm-card-top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0m-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+                </svg>
+                <p>MRO / maintenance teams</p>
+            </div>
+            <div class="sm-card-bottom">
+                <p>Replacement parts and quick response when downtime matters.</p>
+            </div>
+        </div>
+        <div class="sm-card4">
+            <div class="sm-card-top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z" />
+                    <path
+                        d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z" />
+                </svg>
+                <p>Integrators & builders</p>
+            </div>
+            <div class="sm-card-bottom">
+                <p>Brackets, plates, enclosures, and clean multi-op execution.</p>
+            </div>
+        </div>
+    </section>
+    <div class="page-borders"></div>
+
+    <!--Section 9 -->
+
+    <!-- Shipping -->
+    <section class="text-button-3card-layout">
+        <div class="text">
+            <h3>Shipping & Delivery</h3>
+            <p>Shipping is included in the quote unless otherwise noted.<br> We can coordinate standard shipping,
+                expedited
+                shipping, or local delivery options when practical. <br> If packaging, labeling, or kitting is
+                important,
+                tell us up front and we’ll scope it correctly..</p>
+        </div>
+        <div class="button">
+            <a href="quote.html"><button class="btn-hover color-3">Upload A File</button></a>
+        </div>
+        <div class="sm-card1">
+            <div class="sm-card-top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M.102 2.223A3.004 3.004 0 0 0 3.78 5.897l6.341 6.252A3.003 3.003 0 0 0 13 16a3 3 0 1 0-.851-5.878L5.897 3.781A3.004 3.004 0 0 0 2.223.1l2.141 2.142L4 4l-1.757.364zm13.37 9.019.528.026.287.445.445.287.026.529L15 13l-.242.471-.026.529-.445.287-.287.445-.529.026L13 15l-.471-.242-.529-.026-.287-.445-.445-.287-.026-.529L11 13l.242-.471.026-.529.445-.287.287-.445.529-.026L13 11z" />
+                </svg>
+                <p>Standard</p>
+            </div>
+            <div class="sm-card-bottom">
+                <p>Best-value shipping option based on size and destination.</p>
+            </div>
+        </div>
+        <div class="sm-card2">
+            <div class="sm-card-top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M5 0a.5.5 0 0 1 .5.5V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2h1V.5a.5.5 0 0 1 1 0V2A2.5 2.5 0 0 1 14 4.5h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14v1h1.5a.5.5 0 0 1 0 1H14a2.5 2.5 0 0 1-2.5 2.5v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14h-1v1.5a.5.5 0 0 1-1 0V14A2.5 2.5 0 0 1 2 11.5H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2v-1H.5a.5.5 0 0 1 0-1H2A2.5 2.5 0 0 1 4.5 2V.5A.5.5 0 0 1 5 0m-.5 3A1.5 1.5 0 0 0 3 4.5v7A1.5 1.5 0 0 0 4.5 13h7a1.5 1.5 0 0 0 1.5-1.5v-7A1.5 1.5 0 0 0 11.5 3zM5 6.5A1.5 1.5 0 0 1 6.5 5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5zM6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z" />
+                </svg>
+                <p>Expedite</p>
+            </div>
+            <div class="sm-card-bottom">
+                <p>Rush handling when the schedule is critical.</p>
+            </div>
+        </div>
+        <div class="sm-card3">
+            <div class="sm-card-top">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="svg-img"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                    <path
+                        d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
+                </svg>
+                <p>Packaging</p>
+            </div>
+            <div class="sm-card-bottom">
+                <p>Protective wrap, labeling, and kitting available.</p>
+            </div>
+        </div>
+    </section>
+    <div class="page-borders-margin"></div>
+
+    <!-- Form -->
+    <h2 style=" text-align: center;">Request a Quote</h2>
+    <section class="form" style="display: flex; justify-content: center;">
+        <section class="form-layout">
+            <div class="form-name">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name..">
+            </div>
+            <div class="form-email">
+                <label for="name">Email</label>
+                <input type="text" id="name" name="name" placeholder="Your name..">
+            </div>
+            <div class="form-company">
+                <label for="name">Company</label>
+                <input type="text" id="name" name="name" placeholder="Your name..">
+            </div>
+            <div class="form-phone">
+                <label for="name">Phone</label>
+                <input type="text" id="name" name="name" placeholder="Your name..">
+            </div>
+            <div class="form-quanity">
+                <label for="name">Quanity</label>
+                <input type="number" id="quanity" name="quanity" placeholder="Your name..">
+            </div>
+            <div class="form-due">
+                <label for="name">Due Date</label>
+                <input type="text" id="name" name="name" placeholder="Your name..">
+            </div>
+            <div class="form-notes">
+                <label for="Message">Notes</label>
+                <textarea id="Message" name="Message" placeholder="Tell us about your project!"
+                    style="height:200px"></textarea>
+            </div>
+            <div class="form-file">
+                <input type="file" id="file" name="file">
+            </div>
+            <div class="form-submit" style="display: flex; justify-content: center;">
+                <button style="width:80vw; justify-self: center;" class="btn-hover color-8">Submit</button>
+            </div>
+        </section>
+    </section>
+
+    <div class="page-borders-margin"></div>
+    <!-- FAQ -->
+    <div class="faq-card" style="margin:auto;">
+        <div style="margin-left: 1rem;">
+            <h4>FAQ</h4>
+            <h2>Quick answers</h2>
+            <p>The questions buyers typically ask before sending an RFQ.</p>
+        </div>
+        <div style=" margin: auto;">
+            <div class="sm-card1" style="margin: 1rem;">
+                <p><strong>What files can I send?</strong><br><br>
+                    DXF, DWG, STEP, PDF, or ZIP. If you’re not sure, send what you have — we’ll tell you quickly if it’s
+                    a fit.</p>
+            </div>
+            <div class="sm-card1" style="margin: 1rem;">
+                <p><strong>How fast do you quote?</strong><br><br>
+                    Typically within 36 hours. If it’s urgent, call it out in the notes or email us directly.</p>
+            </div>
+            <div class="sm-card1" style="margin: 1rem;">
+                <p><strong>Do you support finishing and hardware?</strong><br><br>
+                    Yes — hardware insertion, finishing, and packaging/kitting are available and confirmed in your
+                    quote.</p>
+            </div>
+            <div class="sm-card1" style="margin: 1rem;">
+                <p><strong>What kind of work is a great fit?</strong><br><br>
+                    Laser-cut parts, formed sheet metal, plates/panels, brackets, guards, and small assemblies —
+                    especially short-run or quick-turn work.</p>
+            </div>
+        </div>
+    </div>
+    <div class="page-borders" style="margin-top: 2rem;"></div>
+
+    <!-- Footer -->
+    <section class="footer" style="display: flex; justify-content: space-around; padding: 3rem; background: #000000;">
+        <section class="footer-col1">
+            <div style="display: flex;">
+                <img src="images/CorpekLogo.jpg" alt="Corpek Manufacturing" class="logo-bottom"></img>
+                <h2>Corpek Manufacturing</h2>
+            </div>
+            <p>Engineer-reviewed quoting and controlled <br>
+                production workflows for laser-cut and fabricated parts.</p>
+            <p>Email: <a href="mailto:quotes@corpekmanufacturing.com"
+                    style="color: #a6b7d8;">quotes@corpekmanufacturing.com</a><br>
+                Peoria, Illinois</p>
+        </section>
+        <section class="footer-col2">
+            <h3>Explore</h3>
+            <div class="footer-link">
+                <a href="services.html">Services</a>
+            </div>
+            <div class="footer-link">
+                <a href="materials.html">Materials</a>
+            </div>
+            <div class="footer-link">
+                <a href="capabilities.html">Capabilities</a>
+            </div>
+            <div class="footer-link">
+                <a href="about.html">About</a>
+            </div>
+        </section>
+        <section class="footer-col2">
+            <h3>Company</h3>
+            <div class="footer-link">
+                <a href="about.html">About</a>
+            </div>
+            <div class="footer-link">
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-link">
+                <a href="quote.html">Request a Quote</a>
+            </div>
+            <div class="footer-link">
+                <a href="FAQ.html">FAQ</a>
+            </div>
+        </section>
+        <section class="footer-col2">
+            <h3>Legal</h3>
+            <div class="footer-link">
+                <a href="privacy.html">Privacy</a>
+            </div>
+            <div class="footer-link">
+                <a href="terms.html">Terms</a>
+            </div>
+        </section>
+    </section>
+    <p style="text-align: center; background-color: black; margin: 0px;">Developed by <a
+            href="terraceviewtechnologies.com" style="color: #a6b7d8;">Terrace View Technologies</a></p>
+    <p style="text-align: center; background-color: black; margin: 0px;">© 2026 Corpek Manufacturing, LLC. All
+        rights
+        reserved.</p>
+    <script src="script.js"></script>
+</body>
+
+</html>
