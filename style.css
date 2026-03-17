@@ -852,6 +852,10 @@ cursor: pointer;
 
 @media only screen and (max-width: 780px) {
 
+    .privacy-card *{
+        margin:0;
+    }
+
     .button{
         width:90%;
         margin:auto;
